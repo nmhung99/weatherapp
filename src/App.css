@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,224 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+html {
+  font-family: Montserrat, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Common Class */
+/* .text-center {
+  text-align: center;
+} */
+#main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar{
+  width: 160px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  z-index: 99999;
+  overflow: scroll
+}
+
+.sidebar li{
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.26);
+  background-color: #fff;
+}
+
+.sidebar li:hover{
+  background-color: red;
+  cursor: pointer;
+}
+
+
+.content {
+  width: 100%;
+  height: 100vh;
+  /* background: url('https://source.unsplash.com/1920x1080/?landscape,nature') no-repeat center/cover; */
+  position: relative;
+  overflow: hidden;
+}
+
+.content .blur{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(143, 136, 136, 0.475);
+}
+
+.search-place {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99999;
+}
+
+.search-place input {
+  width: 260px;
+  height: 40px;
+  border-radius: 50px;
+  padding: 0 16px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  background-color: rgba(244, 238, 238, 0.516);
+  color: #fff;
+}
+
+.btn-search{
+  border: none;
+  background: none;
+  vertical-align: middle;
+  padding: 0 8px;
+  cursor: pointer;
+}
+
+.btn-search img{
+  width: 26px;
+}
+
+.content .mainday {
+  width: 100%;
+  padding: 150px 200px;
+  /* margin-left: 50px; */
+  position: absolute;
+  z-index: 9999;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainday .place {
+  text-transform: uppercase;
+}
+
+.mainday .date {
+  padding: 16px 0;
+}
+
+.mainday .hour {
+  font-size: 60px
+}
+
+.mainday .info-wethear {
+  width: 33.33%;
+  font-size: 20px;
+  /* text-align: center; */
+}
+
+.mainday .wethear-desc {
+  margin: 8px 0;
+}
+
+.mainday .wethear-uv {
+  margin: 8px 0;
+}
+
+.mainday .icon-mainday{
+  padding: 16px 0;
+}
+
+.mainday .icon-mainday img{
+  display:block;
+  margin:auto;
+  width: 160px;
+}
+
+.content .nextdays {
+  /* width: calc(100% - 160px); */
+  width: 100%;
+  height: 220px;
+  position: fixed;
+  /* margin-left: 160px; */
+  bottom: 0;
+  background-color: #2a3347eb;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nextdays .nextday-info{
+  width: 20%;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.nextdays .nextday-info .icon img{
+  width: 50px;
+}
+
+
+
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+  background: url('https://source.unsplash.com/1920x1080/?wind') no-repeat center/cover;
+  position: relative;
+}
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 9999;
+}
+
+.sidebar li{
+  padding: 8px 16px;
+  text-align: center;
+}
+.content .infor {
+  color: white; 
+  font-size:30px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(72, 71, 71, 0.356);
+} */
+
+/* .bg-small {
+  border-radius: 8px;
+  width: 50%;
+  height: 60%;
+  background: url('https://source.unsplash.com/1920x1080/?clouds') no-repeat center/cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
