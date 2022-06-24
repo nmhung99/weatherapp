@@ -1,41 +1,3 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
 
 * {
   margin: 0;
@@ -48,16 +10,12 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Common Class */
-/* .text-center {
-  text-align: center;
-} */
 #main {
   display: flex;
   justify-content: space-between;
 }
 
-.sidebar{
+.sidebar {
   width: 160px;
   height: 100vh;
   position: fixed;
@@ -66,7 +24,7 @@ html {
   overflow: scroll
 }
 
-.sidebar li{
+.sidebar li {
   display: inline-block;
   text-align: center;
   width: 100%;
@@ -76,7 +34,7 @@ html {
   background-color: #fff;
 }
 
-.sidebar li:hover{
+.sidebar li:hover {
   background-color: red;
   cursor: pointer;
 }
@@ -90,7 +48,7 @@ html {
   overflow: hidden;
 }
 
-.content .blur{
+.content .blur {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -117,7 +75,7 @@ html {
   color: #fff;
 }
 
-.btn-search{
+.btn-search {
   border: none;
   background: none;
   vertical-align: middle;
@@ -125,12 +83,13 @@ html {
   cursor: pointer;
 }
 
-.btn-search img{
+.btn-search img {
   width: 26px;
 }
 
 .content .mainday {
   width: 100%;
+  height: 70vh;
   padding: 150px 200px;
   /* margin-left: 50px; */
   position: absolute;
@@ -156,7 +115,11 @@ html {
 .mainday .info-wethear {
   width: 33.33%;
   font-size: 20px;
-  /* text-align: center; */
+  text-align: center;
+}
+
+.mainday .mainday-desc {
+  width: 33.33%;
 }
 
 .mainday .wethear-desc {
@@ -167,20 +130,20 @@ html {
   margin: 8px 0;
 }
 
-.mainday .icon-mainday{
+.mainday .icon-mainday {
   padding: 16px 0;
 }
 
-.mainday .icon-mainday img{
-  display:block;
-  margin:auto;
+.mainday .icon-mainday img {
+  display: block;
+  margin: auto;
   width: 160px;
 }
 
 .content .nextdays {
   /* width: calc(100% - 160px); */
   width: 100%;
-  height: 220px;
+  height: 30vh;
   position: fixed;
   /* margin-left: 160px; */
   bottom: 0;
@@ -189,7 +152,7 @@ html {
   justify-content: space-around;
 }
 
-.nextdays .nextday-info{
+.nextdays .nextday-info {
   width: 20%;
   color: #fff;
   padding: 20px 0;
@@ -199,60 +162,152 @@ html {
   justify-content: space-around;
 }
 
-.nextdays .nextday-info .icon img{
+.nextdays .nextday-info .desc {
+  min-height: 42px;
+  max-height: 46px;
+  display: table;
+}
+
+.nextdays .nextday-info p {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.nextdays .nextday-info .icon img {
   width: 50px;
 }
 
 
+@media only screen and (min-width: 1024px) {
+  .content .nextdays {
+    height: 30vh;
+  }
+  .content .mainday {
+    height: 70vh;
+  }
+}
+@media only screen and (min-width: 740px) and (max-width:1023px) {
+  .content .nextdays {
+    height: 28vh;
+  }
 
-/* * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+  .content .mainday {
+    padding: 150px 60px;
+    height: 72vh;
+  }
+
+  .mainday .icon-mainday img {
+    width: 130px;
+  }
+
+  .mainday .mainday-desc {
+    padding-left: 26px;
+  }
+
+  .mainday .mainday-desc h1 {
+    font-size: 26px;
+  }
+
+  .search-place {
+    top: 40px;
+  }
+
+  .mainday .info-wethear {
+    font-size: 18px;
+  }
+
+  .nextdays .nextday-info .icon img {
+    width: 40px;
+  }
+
+  .nextdays .nextday-info {
+    padding: 12px;
+  }
+
+  .nextday-info .hourforecast,
+  .nextday-info .temp {
+    font-size: 18px;
+  }
+
+  .nextday-info .desc {
+    font-size: 14px;
+  }
 }
 
-.content {
-  width: 100%;
-  height: 100vh;
-  background: url('https://source.unsplash.com/1920x1080/?wind') no-repeat center/cover;
-  position: relative;
-}
-.sidebar {
-  width: 200px;
-  height: 100vh;
-  background-color: #fff;
-  z-index: 9999;
+@media only screen and (max-width: 739px) {
+  .search-place input {
+    width: 230px;
+  }
+
+  .content .mainday {
+    padding: 40px;
+  }
+
+  .mainday .mainday-desc {
+    font-size: 14px;
+  }
+
+  .mainday .hour {
+    font-size: 40px;
+  }
+
+  .mainday .icon-mainday img {
+    width: 90px;
+  }
+
+  .mainday .info-wethear {
+    font-size: 14px;
+  }
+
+  .nextdays .nextday-info .icon img {
+    width: 40px;
+  }
+
+  .nextday-info .hourforecast,
+  .nextday-info .temp {
+    font-size: 14px;
+  }
+
+  .nextday-info .desc {
+    font-size: 14px;
+  }
 }
 
-.sidebar li{
-  padding: 8px 16px;
-  text-align: center;
-}
-.content .infor {
-  color: white; 
-  font-size:30px;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+@media only screen and (max-width: 480px) {
+  .search-place input {
+    width: 115px;
+    height: 30px;
+  }
+  .content .mainday {
+    padding: 25px;
+  }
+  .mainday .mainday-desc {
+    font-size: 12px;
+  }
 
-.content::before{
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(72, 71, 71, 0.356);
-} */
+  .mainday .hour {
+    font-size: 25px;
+  }
 
-/* .bg-small {
-  border-radius: 8px;
-  width: 50%;
-  height: 60%;
-  background: url('https://source.unsplash.com/1920x1080/?clouds') no-repeat center/cover;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
+  .mainday .icon-mainday img {
+    width: 60px;
+  }
+
+  .mainday .info-wethear {
+    font-size: 12px;
+  }
+
+  .nextdays .nextday-info .icon img {
+    width: 30px;
+  }
+
+  .nextday-info .hourforecast,
+  .nextday-info .temp {
+    font-size: 14px;
+  }
+
+  .nextday-info .desc {
+    padding:0 6px;
+    font-size: 11px;
+  }
+}

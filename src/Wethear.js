@@ -159,7 +159,7 @@ function Wethear() {
         </button>
       </div>
       <div className="mainday">
-        <div className="mainday-desc info-wethear">
+        <div className="mainday-desc">
           <h1 className="place">{data.city}</h1>
           <h4 className="date">{data.date}</h4>
           <h2 className="hour">
@@ -185,20 +185,22 @@ function Wethear() {
             if (i < 5) {
               return (
                 <div className="nextday-info" key={i}>
-                  <h2 className="name-day">{value.hour.slice(8, 10)}{value.hour.slice(4, 7)}    {value.hour.slice(11)}</h2>
+                  <h2 className="hourforecast">{value.hour.slice(11)}</h2>
                   <div className="icon">
                     <img src={value.icons} alt="Icon" />
                     {/* <img alt="Icon" /> */}
                   </div>
                   <h2 className="temp">{value.temperature} &deg;</h2>
-                  <p className="temp">{value.description}</p>
+                  <div className="desc">
+                    <p>{value.description}</p>
+                  </div>
                 </div>
               )
             }
           })
         }
       </div>
-      <ToastContainer />
+      <ToastContainer style={{ zIndex: 9999999 }} />
     </div>
   );
 }
